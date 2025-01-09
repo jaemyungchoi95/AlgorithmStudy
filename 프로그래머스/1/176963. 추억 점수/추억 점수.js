@@ -12,8 +12,10 @@ function solution(name, yearning, photo) {
         let temp = 0; // 점수를 담아줄 임시변수 선언
         // 2차원 배열에 접근해서
         for (let j = 0; j < photo[i].length; j++) {
+            // 임시변수에 텍스트가 일치하는 점수를 찾아 넣어준다
             temp += scores.get(photo[i][j]) ?? 0;
         }
+        // 한 배열이 끝나면 answer 배열에 temp값을 넣어준다
         answer.push(temp);
     }
     
