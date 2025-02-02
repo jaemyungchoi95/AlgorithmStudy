@@ -10,31 +10,32 @@ public class Main {
 
         int m = Integer.parseInt(st.nextToken());
 
+        // 인덱스 일치를 위해 길이 21의 배열 선언
         int[] arr = new int[21];
 
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine()); //연산 회당 입력을 받을 것
-            int arr2 = 0;
-            String arr1 = st.nextToken();
+            int num = 0;
+            String name = st.nextToken();
 
-            if(!(arr1.equals("all") || arr1.equals("empty"))){
-                arr2 = Integer.parseInt(st.nextToken());
+            if(!(name.equals("all") || name.equals("empty"))){
+                num = Integer.parseInt(st.nextToken());
             }
-            switch (arr1) {
+            switch (name) {
                 case "add":
-                    arr[arr2] = 1;
+                    arr[num] = 1;
                     break;
 
                 case "remove":
-                    arr[arr2] = 0;
+                    arr[num] = 0;
                     break;
 
                 case "check":
-                    bw.write(arr[arr2]+"\n");
+                    bw.write(arr[num]+"\n");
                     break;
 
                 case "toggle":
-                    arr[arr2] = (arr[arr2]+1)%2;
+                    arr[num] = (arr[num]+1)%2;
                     break;
 
                 case "all":
@@ -42,7 +43,7 @@ public class Main {
                     break;
 
                 case "empty":
-                    arr = new int[21];
+                    Arrays.fill(arr,0);
                     break;
             }
         }
