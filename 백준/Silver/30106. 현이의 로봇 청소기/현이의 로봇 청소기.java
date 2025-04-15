@@ -29,14 +29,15 @@ public class Main {
 		// 상 우 하 좌 순으로 탐색
 		int[] dx = {-1, 0, 1, 0};
 		int[] dy = {0, 1, 0, -1};
-
+		
+		// 방문배열 선언
 		boolean[][] visited = new boolean[N][M];
+		Deque<int[]> deq = new ArrayDeque<>();
 		
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
 				if (visited[i][j]) continue;
 				
-				Deque<int[]> deq = new ArrayDeque<>();
 				deq.addLast(new int[] {i, j});
 				visited[i][j] = true;
 				
