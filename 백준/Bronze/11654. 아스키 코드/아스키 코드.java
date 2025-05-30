@@ -1,0 +1,1 @@
+interface Main{static void main(String[]x)throws Exception{System.out.print(System.in.read()-0);}}
