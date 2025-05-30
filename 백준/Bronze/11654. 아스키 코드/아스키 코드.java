@@ -1,1 +1,1 @@
-interface Main{static void main(String[]x)throws Exception{System.out.print(System.in.read()-0);}}
+interface Main{static void main(String[]s)throws Exception{System.out.print(System.in.read());}}
